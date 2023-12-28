@@ -1,0 +1,29 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}商品列表{% endblock %}
+
+{% block content %}
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">商品ID</th>
+      <th scope="col">商品名称</th>
+         <th scope="col">分类</th>
+      <th scope="col">库存</th>
+        <th scope="col">价格</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        {% for goods in goods_list %}
+      <th scope="row">{{ goods.id }}</th>
+      <td>{{ goods.goodsname }}</td>
+      <td>{{ goods.category }}</td>
+         <td>{{ goods.sku }}</td>
+         <td>{{ goods.price }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

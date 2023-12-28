@@ -1,0 +1,26 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}后台用户列表{% endblock %}
+
+{% block content %}
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">用户名</th>
+      <th scope="col">用户密码</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        {% for admin in admin_list %}
+      <th scope="row">{{ admin.id }}</th>
+      <td>{{ admin.username }}</td>
+      <td>{{ admin.password }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+    </div>
+{% endblock %}

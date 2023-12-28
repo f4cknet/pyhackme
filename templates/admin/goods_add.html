@@ -1,0 +1,39 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}添加商品{% endblock %}
+
+
+{% block content %}
+    <div class="container mt-3">
+        <h2>添加商品</h2>
+        <form style="width: 600px;" action="/admin/add_goods" method="post">
+          <div class="mb-3">
+            <label class="form-label">商品名称</label>
+            <input type="text" class="form-control" name="goodsname">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">商品分类</label>
+            <input type="text" class="form-control" name="category">
+          </div>
+           <div class="mb-3">
+            <label class="form-label">商品主图</label>
+            <input type="text" class="form-control" name="mainimg">
+          </div>
+            <div class="mb-3">
+            <label class="form-label">商品描述</label>
+            <input type="text" class="form-control" name="content">
+          </div>
+           <div class="mb-3">
+            <label class="form-label">库存</label>
+            <input type="text" class="form-control" name="sku">
+          </div>
+            <div class="mb-3">
+            <label class="form-label">商品价格</label>
+            <input type="text" class="form-control" name="price">
+          </div>
+          <button type="submit" class="btn btn-primary">添加商品</button>
+        </form>
+
+    </div>
+
+{% endblock %}

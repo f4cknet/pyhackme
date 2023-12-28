@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link href={{ url_for('static',filename='css/bootstrap.min.css') }} rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<div class="container">
+  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+   <div class="row">
+        <nav class="col-md-4 col-lg-2 d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li>
+                    <a class="nav-item">
+                        <a href="{{ url_for('admin.add_admin') }}">添加管理员</a>
+                    </li>
+                     <li>
+                    <a class="nav-item">
+                        <a href="{{ url_for('admin.admin_list') }}">后台用户列表</a>
+                    </li>
+                   <li>
+                    <a class="nav-item">
+                        <a href="{{ url_for('admin.goods_list') }}">商品列表</a>
+                    </li>
+                  <li>
+                    <a class="nav-item">
+                        <a href="{{ url_for('admin.add_goods') }}">添加商品</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main role="main" class="col-md-8 ml-sm-auto col-lg-10 px-4">
+            {% block content %}{% endblock %}
+        </main>
+   </div>
+
+</body>
+</html>

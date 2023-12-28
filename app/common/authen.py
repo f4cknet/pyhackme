@@ -1,7 +1,10 @@
-from app.models import db
+from app.models import db,User
 from app.common.argon2hash import argon2hasher
 from app.common.sql import ApiSql
 import redis,time
+from flask import redirect,url_for,session
+from functools import wraps
+
 
 redis_client = redis.Redis(host='localhost',port=6379,db=0)
 
@@ -81,6 +84,32 @@ def protect_user_login(phone):
         return "账号被锁定中"
 
     return None
+
+def vaild_email_phone(email,phone):
+    query_phone = db.session.query(User.phone).filter_by(email=email).first()
+    result_phone = query_phone[0]
+    if result_phone == phone:
+        return True
+    else:
+        return False
+
+def is_login(func):
+    @wraps(func)
+    def wrapper(*args,**kwargs):
+        if "username" not in session:
+            return redirect(url_for('admin.login'))
+        else:
+            return func(*args,**kwargs)
+    return wrapper
+
+def user_is_login(func):
+    @wraps(func)
+    def wrapper(*args,**kwargs):
+        if "phone" not in session:
+            return redirect(url_for('user.login'))
+        else:
+            return func(*args,**kwargs)
+    return wrapper
 
 if __name__ == "__main__":
     valid("15311111111'+or+'1'='1","123")

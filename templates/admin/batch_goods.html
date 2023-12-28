@@ -1,0 +1,57 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}导入商品{% endblock %}
+
+{% block content %}
+
+<input type="file" id="fileinput" />
+<button onclick="uploadfile()">上传</button>
+<div id="progress"></div>
+<form action="/admin/batch_goods" method="post">
+    <input type="text" id="batchfile" name="batchfile"readonly />
+    <button type="submit">导入商品</button>
+
+</form>
+
+
+<script>
+     function uploadfile() {
+        var fileInput = document.getElementById('fileinput');
+        var file = fileInput.files[0];
+
+        if (file) {
+            var formData = new FormData();
+            formData.append('file', file);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('POST', '/admin/upload_goodsfile', true);
+
+
+
+            // 上传成功的回调
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    document.getElementById('progress').innerText = '上传成功!';
+                    var response = JSON.parse(xhr.responseText);
+                    document.getElementById('batchfile').value = response.fileUrl;
+
+                } else {
+                    document.getElementById('progress').innerText = '上传失败';
+                }
+            };
+
+            // 上传失败的回调
+            xhr.onerror = function () {
+                document.getElementById('progress').innerText = '上传失败';
+            };
+
+            // 发送文件
+            xhr.send(formData);
+        } else {
+            alert('请选择要上传的文件');
+        }
+    }
+
+</script>
+{% endblock %}

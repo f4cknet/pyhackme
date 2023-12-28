@@ -1,0 +1,22 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}添加管理员{% endblock %}
+
+{% block content %}
+    <div class="container mt-3">
+        <h2>添加后台用户</h2>
+        <form style="width: 600px;" action="/admin/add_admin" method="post">
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">用户名</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" name="username">
+          </div>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">密码</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+          </div>
+          <button type="submit" class="btn btn-primary">添加用户</button>
+        </form>
+
+    </div>
+{% endblock %}

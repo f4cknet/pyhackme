@@ -3,7 +3,7 @@ import pymysql
 class ApiSql(object):
 
     def __enter__(self):
-        self.conn = pymysql.connect(host="localhost",port=3306,user='hackme',passwd='admin123456',db='hackme')
+        self.conn = pymysql.connect(host="localhost",port=3306,user='hackme',passwd='Hackme123!',db='hackme')
         self.cur = self.conn.cursor()
         return self
 

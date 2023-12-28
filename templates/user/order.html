@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link href={{ url_for('static',filename='css/bootstrap.min.css') }} rel="stylesheet">
+    <title>下单页面</title>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>确认订单</h2>
+
+    <!-- 商品信息 -->
+    <div class="card mb-4">
+        <div class="card-header">
+            商品信息
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{ goods.goodsname }}</h5>
+            <img src={{ goods.mainimg }} class="card-img-top" alt="Product 1">
+            <p class="card-text">价格：{{ goods.price }}</p>
+        </div>
+    </div>
+
+<div class="container text-center" id="addressCards">
+  <div class="row">
+      {% for address in addresses %}
+    <div class="col">
+       <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ address.receiver }}</h5>
+                <p class="card-text">{{ address.addressname}}</p>
+                <div class="form-check">
+<!--                    <input class="form-check-input" type="radio" name="addressRadio" id="address1Radio" value="{{ address.id }}" onclick="selectAddress('address1')">-->
+                    <input class="form-check-input" type="radio" name="selectedAddress" id="address1Radio" value="{{ address.id }}" onclick="selectAddress({{ address.id }})">
+
+                </div>
+            </div>
+       </div>
+    </div>
+      {% endfor %}
+
+  </div>
+</div>
+
+
+
+    <!-- 提交按钮 -->
+    <button type="button" class="btn btn-primary">提交订单</button>
+</div>
+
+
+<script>
+    function selectAddress(address){
+        console.log(address);
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
