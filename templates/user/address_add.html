@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link href={{ url_for('static',filename='css/bootstrap.min.css') }} rel="stylesheet">
+    <title>添加收货信息</title>
+</head>
+<body>
+<form style="width: 600px; margin:100px auto" action="/user/address/add" method="post">
+  <div class="mb-3">
+    <label class="form-label">手机号</label>
+    <input type="text" class="form-control" name="phone">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">收件人</label>
+    <input type="text" class="form-control" name="receiver">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">收件地址</label>
+    <input type="text" class="form-control" name="addressname">
+  </div>
+  <button type="submit" class="btn btn-primary">添加地址</button>
+</form>
+</body>
+</html>

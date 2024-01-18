@@ -1,22 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <link href={{ url_for('static',filename='css/bootstrap.min.css') }} rel="stylesheet">
-    <title>商品列表</title>
+{% extends "base.html" %}
+{% block title %}商品列表{% endblock %}
     <style>
         /* 添加自定义样式 */
         .product {
             margin-bottom: 20px;
         }
     </style>
-</head>
-<body>
 
+{% block content %}
 <div class="container">
     <h2 class="mt-5 mb-4">商品列表</h2>
-
     <div class="row">
         <!-- 商品1 -->
         {% for goods in goods_lists %}
@@ -27,18 +20,11 @@
                     <h5 class="card-title">{{ goods.goodsname }}</h5>
                     <p class="card-text">剩余：{{ goods.sku }}</p>
                     <p class="card-text">{{ goods.price }}元</p>
-                    <a href="/user/order?goodsid={{ goods.id }}" class="btn btn-primary">购买</a>
+                       <a href="{{ url_for('order.index',goodsid=goods.id) }}" class="btn btn-primary">购买</a>
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
 </div>
-
-<!-- Bootstrap的JS文件，确保在body末尾引入，以加速页面加载 -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-</body>
-</html>
+{% endblock %}

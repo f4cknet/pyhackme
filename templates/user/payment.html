@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>支付页面</title>
+</head>
+<body>
+
+  <h1>支付页面</h1>
+  <p>订单ID: {{ order.id }}</p>
+  <p>订单金额：{{ goods.price }}</p>
+  <p>用户余额: ${{ user.balance }}</p>
+  <form action="{{ url_for('order.payment', order_id=order.id) }}" method="post">
+    <label for="payment_method">选择支付方式：</label>
+    <select id="payment_method" name="payment_method" required>
+      <option value="balance">余额支付</option>
+      <option value="wechat">微信支付</option>
+      <!-- 其他支付方式 -->
+    </select>
+    <br>
+    <button type="submit">支付</button>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link href={{ url_for('static',filename='css/bootstrap.min.css') }} rel="stylesheet">
+    <title>收货人信息列表</title>
+</head>
+<div class="container">
+    <h4>我的地址</h4>
+</div>
+{% for address in addresses %}
+<div class="card" style="width: 18rem; margin-top:10px">
+  <div class="card-body">
+      <h5>收件人：{{ address.receiver }}</h5>
+      <p>手机号：{{ address.phone }}</p>
+      <p>地址：{{ address.addressname }}</p>
+      <a href="#" class="card-link">修改</a>
+        <a href="#" class="card-link">删除</a>
+  </div>
+
+{% endfor %}

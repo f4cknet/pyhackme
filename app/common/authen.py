@@ -105,7 +105,7 @@ def is_login(func):
 def user_is_login(func):
     @wraps(func)
     def wrapper(*args,**kwargs):
-        if "phone" not in session:
+        if "user_id" not in session:
             return redirect(url_for('user.login'))
         else:
             return func(*args,**kwargs)

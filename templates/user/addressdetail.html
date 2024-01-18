@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link href={{ url_for('static',filename='css/bootstrap.min.css') }} rel="stylesheet">
+    <title>我的订单</title>
+</head>
+<body>
+    <p>收货人：{{ address.receiver }}</p>
+    <p>地址：{{ address.addressname }}</p>
+    <p>phone: {{ address.phone }}</p>
+</body>
+
+</html>

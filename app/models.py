@@ -28,6 +28,8 @@ class Address(db.Model):
     phone = db.Column(db.String(256),nullable=False)
     addressname = db.Column(db.String(256))
     user_id = db.Column(db.Integer,db.ForeignKey('user.id'))
+    orders = db.relationship('Order',backref='address')
+
 
     def __repr__(self):
         return "(%s,%s,%s)" %(self.receiver,self.addressname,self.user_id)
@@ -52,21 +54,24 @@ class Goods(db.Model):
     sku = db.Column(db.Integer,nullable=False)
     price = db.Column(db.Float,nullable=False)
     users = db.relationship('User', secondary=user_goods, back_populates='goods')
-    order_id = db.Column(db.Integer,db.ForeignKey('order.id'))
+    orders = db.relationship('Order',back_populates='goods')
 
     def __repr__(self):
         return "(%s,%s,%s,%d,%f)" %(self.goodsname,self.mainimg,self.category,self.price,self.sku)
 
 class Order(db.Model):
     __tablename__ = "order"
-    id = db.Column(db.Integer,primary_key=True)
+    id = db.Column(db.String(32),primary_key=True,unique=True)
     generatetime = db.Column(db.DateTime)
-    status = db.Column(db.String(1))
+    status = db.Column(db.String(1),default="0")
+    payment_method = db.Column(db.String(20), nullable=False)
     user_id = db.Column(db.Integer,db.ForeignKey('user.id'))
-    goodss = db.relationship('Goods',backref='order')
+    goods_id = db.Column(db.Integer, db.ForeignKey('goods.id'))
+    address_id = db.Column(db.Integer,db.ForeignKey('address.id'))
+    goods = db.relationship('Goods',back_populates='orders')
 
     def __repr__(self):
-        return "(%s,%s,%s,%s)" %(self.generatetime,self.status,self.user_id,self.goodss)
+        return "(%s,%s,%s,%s)" %(self.generatetime,self.status,self.user_id,self.goods_id)
 
 
 

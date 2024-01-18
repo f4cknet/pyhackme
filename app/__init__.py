@@ -1,27 +1,29 @@
-from flask import Flask
-from app.user.views import user
-from app.admin.views import admin
-from app.models import db
+from flask import Flask,render_template
+from app.views.user import userapp
+from app.views.admin import adminapp
+from app.views.order import orderapp
+from app.models import db,Goods
 from flask_migrate import Migrate
+from app import config
 import pymysql
 from flask_mail import Mail
 pymysql.install_as_MySQLdb()
 
 app = Flask(__name__,template_folder="../templates",static_folder="../static")
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://hackme:Hackme123!@localhost:3306/hackme?charset=utf8"
-app.config['SECRET_KEY'] = "hackmemdakldmsakl"
-app.config['MAIL_SERVER'] = 'smtp.163.com'
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USERNAME'] = 'zmzsg100@163.com'
-app.config['MAIL_PASSWORD'] = 'FZVDQWVEXOPNQQHP'
-app.config['MAIL_DEFAULT_SENDER'] = 'zmzsg100@163.com'
+app.config.from_pyfile('config.py')
 
 
-app.register_blueprint(user)
-app.register_blueprint(admin)
+app.register_blueprint(userapp)
+app.register_blueprint(adminapp)
+app.register_blueprint(orderapp)
 db.init_app(app)
 mail = Mail(app)
+
+@app.route('/',methods=['GET'])
+def shoplist():
+    goods_lists = db.session.query(Goods).all()
+    return render_template('/user/goods_lists.html',goods_lists=goods_lists)
+
 
 
 migrate = Migrate(app,db)

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link href={{ url_for('static',filename='css/bootstrap.min.css') }} rel="stylesheet">
+    <title>我的订单</title>
+</head>
+
+<p>订单id: {{ order.orderid }}</p>
+<p>订单生成时间: {{ order.generatetime }}</p>
+<p>订单状态：{{ order.orderstatus }}</p>
+<p>支付方式：{{ order.payment }}</p>
+<p>商品：{{ order.goodsname }}</p>
+<p>收货人：{{ order.receiver }}, 收货人电话：{{ order.phone }}， 收货地址: {{ order.addressname }}</p>
+<a href="{{ url_for('user.refund', order_id=order.orderid) }}">退款</a>
+</html>

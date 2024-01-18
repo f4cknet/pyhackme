@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link href={{ url_for('static',filename='css/bootstrap.min.css') }} rel="stylesheet">
+    <title>我的订单</title>
+</head>
+
+<body>
+ {% for order in orders %}
+<div class="card" style="width: 18rem; margin-top:10px">
+
+  <div class="card-body" >
+      <h6 class="card-title">订单ID：{{ order.orderid }}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">{{ order.time }}</h6>
+      <p>商品：{{ order.goods }}<p>
+       <p>订单价格：{{ order.price }}<p>
+      <p>订单状态：
+      {% if order.orderstatus is none %}
+      未支付
+      {% elif order.orderstatus == "1" %}
+      已支付
+      {% else %}
+      订单失效
+      {% endif %}
+      <p>
+         <a href="/user/order/detail?orderid={{ order.orderid }}" class="card-link">订单详情</a>
+  </div>
+
+</div>
+   {% endfor %}
+
+
+</body>
