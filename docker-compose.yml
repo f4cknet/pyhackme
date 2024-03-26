@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - C:/Users/zmzsg/Desktop/web靶场开发/pyhackme:/work
+    depends_on:
+      - db
+      - redis
+    environment:
+      MYSQL_HOST: db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: Pyhackme1024
+      MYSQL_DATABASE: hackme
+      REDIS_HOST: redis
+      ossak: 
+      osssk: 
+      MAIL_SERVER: smtp.163.com
+      MAIL_PORT: 465
+      MAIL_USE_SSL: True
+      MAIL_USERNAME: 
+      MAIL_PASSWORD: 
+      MAIL_DEFAULT_SENDER: 
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: Pyhackme1024
+      MYSQL_DATABASE: hackme
+    ports:
+      - "3306:3306"
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"

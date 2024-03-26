@@ -1,9 +1,10 @@
 import pymysql
+from app.config import mysql_host,mysql_database,mysql_password,mysql_user
 
 class ApiSql(object):
 
     def __enter__(self):
-        self.conn = pymysql.connect(host="localhost",port=3306,user='hackme',passwd='Hackme123!',db='hackme')
+        self.conn = pymysql.connect(host=mysql_host,port=33060,user=mysql_user,passwd=mysql_password,db=mysql_database)
         self.cur = self.conn.cursor()
         return self
 

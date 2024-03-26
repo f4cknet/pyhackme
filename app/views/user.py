@@ -1,4 +1,4 @@
-from flask import Blueprint,url_for,request,render_template,current_app,session,redirect
+from flask import Blueprint,url_for,request,render_template,current_app,session,redirect,flash
 from app.models import User,db,Address
 from app.common.argon2hash import argon2hasher
 from app.common.authen import valid_user,redis_client,protect_user_login,vaild_email_phone,user_is_login
@@ -24,8 +24,10 @@ def register():
             user = User(phone=phone, email=email, password=password_hash)
             db.session.add(user)
             db.session.commit()
-            return "注册成功"
+            flash('注册成功，请登录！', 'success')
+            return redirect('/user/login')
         except Exception as e:
+            print(str(e))
             return "已存在该用户"
             db.session.rollback()
             raise e

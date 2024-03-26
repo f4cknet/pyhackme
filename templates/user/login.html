@@ -2,7 +2,15 @@
  <head>
      <link href={{ url_for('static',filename='css/bootstrap.min.css') }} rel="stylesheet">
  </head>
-
+ {% with messages = get_flashed_messages(with_categories=true) %}
+ {% if messages %}
+   {% for category, message in messages %}
+     <div class="alert alert-{{ category }}">
+       {{ message }}
+     </div>
+   {% endfor %}
+ {% endif %}
+{% endwith %}
 <form style="width: 600px; margin:100px auto" action="/user/login" method="post">
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">手机号</label>
