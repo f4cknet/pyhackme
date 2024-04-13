@@ -31,8 +31,6 @@ def register():
             return "已存在该用户"
             db.session.rollback()
             raise e
-        else:
-            return "两次密码不一致，重新注册"
 
     return render_template("/user/register.html")
 
@@ -49,7 +47,7 @@ def login():
         if result is True:
             user = User.query.filter_by(phone=phone).first()
             session['user_id'] = user.id
-            session['username'] = user.phone
+            # session['username'] = user.phone
             return redirect('/')
         elif result is False:
             lockout_time = 60

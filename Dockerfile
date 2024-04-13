@@ -5,6 +5,7 @@ WORKDIR /work
 COPY requirements.txt ./
 
 RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple  --no-cache-dir -r requirements.txt
+RUN apt-get update && apt-get install -y default-mysql-client && rm -rf /var/lib/apt/lists/*
 
 # 设置启动脚本可执行权限
 COPY entrypoint.sh ./
