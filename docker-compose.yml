@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
   web:
@@ -8,7 +8,7 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - C:/Users/zmzsg/Desktop/web靶场开发/pyhackme:/work
+      - /Users/minzhizhou/coding/pyhackme:/work
     depends_on:
       - db
       - redis

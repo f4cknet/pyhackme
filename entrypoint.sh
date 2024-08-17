@@ -23,4 +23,4 @@ if [ "$FLASK_DB_STATUS" != "Already at revision 'head'" ]; then
 fi
 
 # 启动 Flask 应用
-flask run --host=0.0.0.0 --debug
+flask run --host=0.0.0.0 --debug > flask.log

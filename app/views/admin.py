@@ -1,12 +1,13 @@
 # -*-utf-8-*-
 import oss2,io
-from flask import Blueprint,request,render_template,session,redirect
+from flask import Blueprint,request,render_template,session,redirect,render_template_string
 from app.models import Admin,db,Goods
 from app.common.argon2hash import argon2hasher
 from app.common.authen import valid_admin,redis_client,protect_user_login,is_login
 from uuid import  uuid4
 from app import config
 import urllib
+from markupsafe import Markup
 
 
 adminapp = Blueprint('admin',__name__,url_prefix='/admin')
@@ -150,12 +151,11 @@ def upload_goodsfile():
     endpoint = "https://oss-cn-beijing.aliyuncs.com"
     bucket = oss2.Bucket(auth,endpoint,'m1nzhi')
     upload_file = request.files.get('file')
-    upload_file_name = str(uuid4())+'.csv'
+    upload_file_name = upload_file.filename
     upload_result = bucket.put_object(upload_file_name,upload_file)
     if upload_result.status == 200:
         file_url = bucket.sign_url('GET',upload_file_name,600)
         print(file_url)
         return {"fileUrl":file_url}
     else:
-        return {"code":400,"msg":"上传失败"}
-
+        return {"code":400,"msg":f"{upload_result.status}"}

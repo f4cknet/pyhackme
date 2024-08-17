@@ -7,6 +7,8 @@
 <input type="file" id="fileinput" />
 <button onclick="uploadfile()">上传</button>
 <div id="progress"></div>
+<!-- <div id="upload_filename"></div> -->
+ {{ fileUrl }}
 <form action="/admin/batch_goods" method="post">
     <input type="text" id="batchfile" name="batchfile"readonly />
     <button type="submit">导入商品</button>
@@ -34,16 +36,17 @@
                 if (xhr.status === 200) {
                     document.getElementById('progress').innerText = '上传成功!';
                     var response = JSON.parse(xhr.responseText);
+                    // document.getElementById('upload_filename').innerText = response.filename;
                     document.getElementById('batchfile').value = response.fileUrl;
 
                 } else {
-                    document.getElementById('progress').innerText = '上传失败';
+                    document.getElementById('progress').innerText = response.msg;
                 }
             };
 
             // 上传失败的回调
             xhr.onerror = function () {
-                document.getElementById('progress').innerText = '上传失败';
+                document.getElementById('progress').innerText = response.msg;
             };
 
             // 发送文件

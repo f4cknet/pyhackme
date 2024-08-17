@@ -1,4 +1,4 @@
-from flask import Blueprint,url_for,request,render_template,current_app,session,redirect,flash
+from flask import Blueprint,url_for,request,render_template,current_app,session,redirect,flash,render_template_string
 from app.models import User,db,Address
 from app.common.argon2hash import argon2hasher
 from app.common.authen import valid_user,redis_client,protect_user_login,vaild_email_phone,user_is_login
@@ -183,3 +183,34 @@ def logout():
 
     return redirect('/')
 
+
+@userapp.route('/upload_ssti',methods=['POST','GET'])
+@user_is_login
+def upload_ssti():     
+    if request.method == "POST":
+        upload_file = request.files.get('file')
+        upload_file_name = upload_file.filename
+        template=f'''
+         <!doctype html>
+            <title>Upload a File</title>
+            <h1>Upload a File</h1>
+            <form action="upload_ssti" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload">
+            </form>
+        <p>上次成功</p>
+        <p>文件名：{upload_file_name} </p>
+        '''
+        return jsonify({"code":200,data:{"filename":upload_file_name}})
+        return render_template_string(template)
+       # return reander_template('user/upload.html',upload_file_name=upload_file_name)
+       #return 
+    return '''
+            <!doctype html>
+            <title>Upload a File</title>
+            <h1>Upload a File</h1>
+            <form action="upload_ssti" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload">
+            </form>
+        '''

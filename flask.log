@@ -1,0 +1,244 @@
+ * Debug mode: on
+select password from user where phone='18600000001' limit 0,1
+select password from user where phone='151123456789' limit 0,1
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '${:-y$}{${6pr:-j}nd${env:fm4:-}i:d${xyf::-n}s://log4localhost.1723881149117.FqXA.null/a}', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='${:-y$}{${6pr:-j}nd${env:fm4:-}i:d${xyf::-n}s://log4localhost.1723881153509.HPAI.null/a}' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011' for key 'phone'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '${:-y$}{${6pr:-j}nd${env:fm4:-}i:d${xyf::-n}s://log4localhost.1723881149117.FqXA.null/a}', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+select password from user where phone='15100000011' limit 0,1
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='None' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+'NoneType' object has no attribute 'encode'
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='${url:UTF-8:http://text4localhost.1723881252081.bNLz.null/allbp}' limit 0,1
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '${url:UTF-8:http://text4localhost.1723881256591.tkWo.null/allbp}', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011' for key 'phone'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '${url:UTF-8:http://text4localhost.1723881256591.tkWo.null/allbp}', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+select password from user where phone='15100000011' limit 0,1
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='None' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+'NoneType' object has no attribute 'encode'
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='None' limit 0,1
+select password from user where phone='15100000011' limit 0,1
+'NoneType' object has no attribute 'encode'
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+select password from user where phone='15100000011'' limit 0,1
+select password from user where phone='15100000011' limit 0,1
+select password from user where phone='15100000011"' limit 0,1
+select password from user where phone='15100000011' limit 0,1
+select password from user where phone='15100000011\' limit 0,1
+select password from user where phone='15100000011' limit 0,1
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': "15100000011'", 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011' for key 'phone'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': "15100000011@qq.com'", 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011"', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011' for key 'phone'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com"', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011\\', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011' for key 'phone'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com\\', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+(pymysql.err.IntegrityError) (1062, "Duplicate entry '15100000011@qq.com' for key 'email'")
+[SQL: INSERT INTO user (phone, email, password, balance) VALUES (%(phone)s, %(email)s, %(password)s, %(balance)s)]
+[parameters: {'phone': '15100000011', 'email': '15100000011@qq.com', 'password': '$argon2id$v=19$m=32768,t=16,p=2$MTIzNDU2Nzg5$UvUF8+CbqIzU4Vdv6Q4EEOrLZ7XdG++dWUS5m3BPt+Q', 'balance': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
